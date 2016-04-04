@@ -1,0 +1,21 @@
+*.class
+
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+build
+*.iml
+*.log
+*.err
+*.lock
+logs
+*.pid
+*.state
+.gradle
+build
+*.class
+.idea
+classes*
