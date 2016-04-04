@@ -3,6 +3,7 @@ version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 apply plugin: 'pmd'
+apply plugin: 'jdepend'
 
 sourceCompatibility = 1.8
 
@@ -21,6 +22,11 @@ tasks.withType(Pmd){
         xml.enabled = false
         html.enabled = true
     }
+}
+
+jdepend {
+    toolVersion = '2.9.1'
+    ignoreFailures = true
 }
 //Code Analysis and Find Bugs - PMD and jdepend END
 
