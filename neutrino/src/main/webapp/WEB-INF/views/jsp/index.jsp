@@ -58,7 +58,7 @@
 			<h2>Publish</h2>
 			<p>Test and publish to UAT, Prod</p>
 			<p>
-				<a class="btn btn-default" href="#" role="button">View details>>></a>
+				<a class="btn btn-default" href="#" role="button">View details</a>
 			</p>
 		</div>
 	</div>
