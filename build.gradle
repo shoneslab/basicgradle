@@ -4,6 +4,7 @@ version '1.0-SNAPSHOT'
 apply plugin: 'java'
 apply plugin: 'pmd'
 apply plugin: 'jdepend'
+apply plugin: 'jacoco'
 
 sourceCompatibility = 1.8
 
@@ -11,7 +12,9 @@ repositories {
     mavenCentral()
 }
 
-// Code Analysis and Find Bugs - PMD and jdepend START
+
+
+// Static Code Analysis and Find Bugs - PMD and jdepend START
 pmd {
     ignoreFailures = true
 }
@@ -28,10 +31,40 @@ jdepend {
     toolVersion = '2.9.1'
     ignoreFailures = true
 }
-//Code Analysis and Find Bugs - PMD and jdepend END
+//Static Code Analysis and Find Bugs - PMD and jdepend END
 
 
 
+//Integration Tests and Code Coverage - JACOCO STARTS
+/*sourceSets {
+    integrationTest {
+        java.srcDir file('src/integTest/java')
+        resources.srcDir file('src/integTest/resources')
+        compileClasspath = sourceSets.main.output + configurations.testRuntime
+        runtimeClasspath = output + compileClasspath
+    }
+}
+
+task integrationTest(type: Test) {
+    description = "Runs the integration tests"
+    group = 'verification'
+    testClassesDir = sourceSets.integrationTest.output.classesDir
+    classpath = sourceSets.integrationTest.runtimeClasspath
+    testResultsDir = file("$testResultsDir/integration")
+}
+
+task jacocoIntegrationTestReport(type: JacocoReport) {
+    sourceSets sourceSets.main
+    //executionData integTest
+}*/
+
+//Code Coverage - JACOCO ENDS
+
+
+
+//Measure Quality using SONAR CUBE - starts (sonar Runner plugin)
+
+//Measure Quality using SONAR CUBE - starts
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
