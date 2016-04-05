@@ -51,7 +51,7 @@
 			<h2>Deploy</h2>
 			<p>Provision Machines, Get & deploy binaries, test</p>
 			<p>
-				<a class="btn btn-default" href="#" role="button">View details</a>
+				<a class="btn btn-default" href="#" role="button">View details...</a>
 			</p>
 		</div>
 		<div class="col-md-4">
